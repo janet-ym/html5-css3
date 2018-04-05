@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(哆啦A梦)</title>
+	<style>
+		canvas {border: 3px solid lightblue;}
+	</style>
+</head>
+
+<body>
+	<canvas width="800" height="400" id="myCanvas"></canvas>
+	<script>
+		var a = document.getElementById('myCanvas');
+		var cxt = a.getContext('2d');
+
+		cxt.fillStyle = "#00a0e8"; //大圆
+		cxt.beginPath();
+		cxt.scale(1.0, 0.8);
+		cxt.arc(500, 110, 85, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.fillStyle = "#fff"; //小圆
+		cxt.beginPath();
+		cxt.arc(500, 120, 65, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000"; //左眼
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.scale(0.7, 1.1);
+		cxt.arc(680, 65, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.fillStyle = "#fff"; //眼睛眼白
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.arc(680, 65, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000"; //右眼
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		//cxt.scale(0.7,1.1);
+		cxt.arc(740, 65, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.fillStyle = "#fff"; //眼睛眼白
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.arc(740, 65, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.fillStyle = "#000"; //眼睛大小
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(690, 65, 6, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.fillStyle = "#000"; //眼睛大小
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(730, 65, 6, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.fillStyle = "#e70012"; //鼻子形状
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(710, 90, 10, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000"; //鼻子描边
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(710, 90, 10, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //嘴巴
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.moveTo(690, 140);
+		cxt.lineTo(730, 140);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; // 胡须左上
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.moveTo(625, 80);
+		cxt.lineTo(680, 110);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //胡须左中
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.moveTo(625, 120);
+		cxt.lineTo(680, 120);
+		cxt.stroke();
+		
+		cxt.strokeStyle = "#000"; //胡须左下
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.moveTo(630, 150);
+		cxt.lineTo(680, 130);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //胡须右上
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.moveTo(800, 80);
+		cxt.lineTo(740, 110);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //胡须右中
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.moveTo(800, 120);
+		cxt.lineTo(740, 120);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //胡须右下
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.moveTo(795, 150);
+		cxt.lineTo(740, 130);
+		cxt.stroke();
+	</script>
+</body>
+
+</html>

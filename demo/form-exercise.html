@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单作业</title>
+</head>
+<body>
+	<form action="#" method="post">
+		<h3>您的账号信息：</h3>
+		<li>注册方式：*
+			<input type="radio" name="radiobutton" id="email" required><label for="email">E-mail注册</label>
+			<input type="radio" name="radiobutton" id="phone"><label for="phone">手机号码注册</label>
+			<label><input type="radio" name="radiobutton" value="QQ用户注册">QQ用户注册</label>
+		</li>
+		<li>注册邮箱：*
+			<input type="email"  placeholder="12345@qq.com" required>
+		</li>
+		<li>登录密码：*
+			<input type="password" required maxlength="11" minlength="6">
+		</li>
+		<li>昵称：*
+			<input type="text" required>
+		</li>
+
+		<h3>您的交友档案：</h3>
+		<li>您是：*
+			<input type="radio" name="radiobutton" id="nan" required><label for="nan">男</label>
+			<input type="radio" name="radiobutton" id="nv" required><label for="nv">女</label>（注册后性别不可更改）
+		</li>
+		<li>出生日期：*
+			<input type="date" required>
+		</li>
+		<li>所在地区：*
+			<input type="text">
+		</li>
+		<li>身高：*
+			<select name="select" style="width:80px; height:25px;"  required>
+				<option value="170厘米" selected="selected">170厘米</option>
+				<option value="180厘米">180厘米</option>
+				<option value="165厘米">165厘米</option>
+			</select>
+		</li>
+		<li>学历：*
+			<select name="select" style="width:80px; height:25px;"  required>
+				<option value="本科" selected="selected">本科</option>
+				<option value="专科">专科</option>
+				<option value="高中">高中</option>
+			</select>
+		</li>
+		<details>
+			<summary>您的婚姻状况是：*</summary>
+				<ul>
+					<li>已婚</li>
+					<li>恋爱中</li>
+					<li>单身</li>
+					<li>离婚</li>
+				</ul>
+		</details>
+		<li>真实姓名：*
+			<input type="text" required>先生
+		</li>
+		<li>手机号码：*
+			<input type="telt" maxlength="11" minlength="11" placeholder="110-2345-3444">
+		</li>
+		<li>自我介绍：*
+			<a href="">自己写</a>
+			<a href="">帮你写</a>
+			<a href="">贴标签</a><br />
+			<input type="textarea" style="width:300px; height:45px;" placeholder="为保证您的信息安全，请勿在内心独白中透露您的姓名和任何联系方式">
+		</li>
+
+		<p>安全提示：为保证您的信息安全，请勿在内心独白中透露您的姓名和任何联系方式。<br /><a href="">什么样的自我介绍更能吸引异性关注</a></p>
+		<li><input type="checkbox">我已经阅读并同意百合服务条款</li>
+	</form>
+	<input type="submit" value="立即免费注册">
+</body>
+</html>

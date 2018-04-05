@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业</title>
+	<style>
+		td.bg{background-color: #eee; font-weight: bold; padding-right: 25px;}
+		td{padding-left: 5px; font-size: 15px;}
+	</style>
+</head>
+<body>
+	<form action="" method="post">
+		<table width="400" height="300" border="1" cellspacing="0">
+			<tr>
+				<td class="bg">姓名</td>
+				<td><input type="text" name="textfield1"></input></td>
+			</tr>
+			<tr>
+				<td class="bg">性别</td>
+				<td>
+					<input type="radio" name="radiobutton" value="男" id="nan"><label for="nan">男</label>
+					<input type="radio" name="radiobutton" value="女" id="nv"><label for="nv">女</label>
+				</td>
+			</tr>
+			<tr>
+				<td class="bg">所属组</td>
+				<td>
+					<select name="select" style="width:50px; height:25px;">
+						<option value="组一" selected="selected">组一</option>
+						<option value="组二">组二</option>
+						<option value="组三">组三</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="bg">类型</td>
+				<td>
+					<input type="checkbox" name="类型一" checked="checked">类型一
+					<input type="checkbox" name="类型二" checked="checked">类型二
+					<input type="checkbox" name="类型三">类型三
+				</td>
+			</tr>
+			<tr>
+				<td class="bg">文件</td>
+				<td>
+					<input type="text" disabled="disabled">
+					<button>浏览...</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="bg">备注</td>
+				<td><input type="textarea" style="width:300px; height:45px;"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<button>提交</button>
+					<button>清除</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
