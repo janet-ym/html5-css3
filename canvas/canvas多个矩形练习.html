@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas练习</title>
+	<style>
+		#myCanvas{border: 2px solid #657;}
+	</style>
+</head>
+<body>
+	<canvas width="800" height="300" id="myCanvas"></canvas>
+	<script type='text/javascript'>
+	var a = document.getElementById('myCanvas');
+	var b = a.getContext('2d');
+	b.fillStyle = 'blue';
+	b.fillRect(10,10,120,120);
+	b.fillStyle = 'red';
+	b.fillRect(140,10,120,120);
+	b.fillStyle = 'lightblue';
+	b.fillRect(280,10,120,120);
+	b.fillStyle = 'yellow';
+	b.fillRect(420,10,120,120);
+	b.fillStyle = 'green';
+	b.fillRect(560,10,120,120);
+
+	b.strokeStyle = 'blue';
+	b.strokeRect(10,150,120,120);
+	b.strokeStyle = 'red';
+	b.strokeRect(140,150,120,120);
+	b.strokeStyle = 'lightblue';
+	b.strokeRect(280,150,120,120);
+	b.strokeStyle = 'yellow';
+	b.strokeRect(420,150,120,120);
+	b.strokeStyle = 'green';
+	b.strokeRect(560,150,120,120);
+	</script>
+</body>
+</html>

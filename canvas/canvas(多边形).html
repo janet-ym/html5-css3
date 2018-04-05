@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多边形</title>
+</head>
+<body>
+	<canvas id="canvas" width="1000" height="500" style="border: 2px solid green;"></canvas>
+	<script type="text/javascript">
+	var c = document.getElementById('canvas');
+	var cxt = c.getContext('2d');
+	cxt.fillStyle = 'yellow';
+	cxt.beginPath();
+	var val = 0;
+	for(var i = 0; i < 4; i++;){
+		cxt.arc(350,70,60,val,val + Math.PI/4,false);
+		val += Math.PI/2;
+	}
+	cxt.closePath();
+	cxt.fill();
+	</script>
+</body>
+</html>

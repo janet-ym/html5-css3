@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas初识</title>
+	<style>
+		#myCanvas{border: 3px dashed #592;}
+	</style>
+</head>
+<body>
+	<canvas width="1000" height="500" id="myCanvas">您的浏览器不支持</canvas>
+	<!-- 属性：单词后面没有括号。	方法(函数)：语法：functionName([e])   方法名(可选的参数) -->
+	<script type='text/javascript'>
+	var c = document.getElementById('myCanvas'); //获取canvas元素
+	var cxt = c.getContext('2d'); //创建绘图环境
+	cxt.fillStyle = 'red';
+	cxt.fillRect(0,0,150,70);
+	cxt.fillStyle = 'yellow';
+	cxt.fillRect(300,0,150,150);
+	cxt.strokeRect(300,200,150,150);
+	cxt.clearRect(0,0,150,70);
+	cxt.clearRect(300,200,150,150);
+	</script>
+</body>
+</html>

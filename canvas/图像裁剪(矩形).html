@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图像的裁剪(矩形之间)</title>
+</head>
+<body>
+	<h1>图像的裁剪(矩形之间)</h1> 
+	<canvas width="500" height="140" id="myCanvas" style="border:2px solid green;"></canvas>
+	<script>
+		var cxt = document.getElementById('myCanvas').getContext('2d');
+
+		cxt.fillStyle="yellow";
+		cxt.beginPath();
+		cxt.rect(0,0,500,140);
+		cxt.fill();
+
+		cxt.beginPath(); // clip()裁剪
+		cxt.rect(100,20,300,100);
+		cxt.clip();
+
+		cxt.fillStyle="red";
+		cxt.beginPath();
+		cxt.rect(0,0,500,140);
+		cxt.fill();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(绘制爱心)</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="600" height="400" style="border: 2px solid green;">您的浏览器不支持canvas</canvas>
+	<script>
+	var m = document.getElementById('myCanvas');
+	var cxt = m.getContext('2d');
+
+	cxt.strokeStyle = 'red';
+	cxt.beginPath();
+	cxt.moveTo(300,155); //起点
+	cxt.bezierCurveTo(200,30,60,180,300,350); //(控制点1，控制点2，终点)
+	cxt.stroke();
+
+	// cxt.moveTo(300,400);
+	cxt.bezierCurveTo(540,180,400,30,300,155);
+	cxt.stroke();
+
+	</script>
+</body>
+</html>

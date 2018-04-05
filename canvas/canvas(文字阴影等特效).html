@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(文字的阴影等效果)</title>
+</head>
+<body>
+	<canvas width="400" height="400" id="myCanvas" style="border: 2px dashed green;"></canvas>
+	<script>
+		var a=document.getElementById('myCanvas');
+		var cxt=a.getContext('2d');
+
+		cxt.lineWidth = 3;
+		
+		cxt.shadowOffsetX = 5; //阴影的偏移量
+		cxt.shadowOffsetY = 5; //阴影的偏移量
+		
+		cxt.shadowBlur = 5; //阴影的模糊程度
+		
+		cxt.shadowColor = "grey"; //阴影的颜色
+		
+		cxt.fillText("hello",10,10);	
+	</script>
+</body>
+</html>

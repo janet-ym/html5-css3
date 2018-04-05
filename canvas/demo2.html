@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" width="900" height="600">你的浏览器不支持</canvas>
+	<script>
+	var cxt=document.getElementById('canvas').getContext('2d');
+
+	cxt.lineWidth=2;
+	cxt.strokeStyle="red";
+	cxt.beginPath();
+	cxt.moveTo(300,250);
+	cxt.lineTo(200,100);
+	cxt.lineTo(500,150);
+	cxt.stroke();
+
+	cxt.beginPath();
+	cxt.moveTo(300,250);
+	cxt.quadraticCurveTo(100,250,100,200);
+	cxt.strokeStyle="red";
+	cxt.stroke();
+
+	cxt.beginPath();
+	cxt.moveTo(300,300);
+	cxt.quadraticCurveTo(100,320,100,200);
+	cxt.strokeStyle="red";
+	cxt.stroke();
+
+	</script>
+</body>
+</html>

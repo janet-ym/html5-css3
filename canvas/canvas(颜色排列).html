@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas颜色排布效果</title>
+</head>
+<body>
+	<canvas width="400" height="400" id="myCanvas" style="border: 2px dashed green;"></canvas>
+	<script>
+		var a=document.getElementById('myCanvas');
+		var cxt=a.getContext('2d');
+
+		cxt.fillStyle='red';
+		cxt.save(); //存储一次
+		cxt.fillRect(300,300,20,20);
+
+		cxt.fillStyle='blue'; //改变填充色
+		cxt.save(); //再次存储
+		cxt.fillRect(300,320,20,20); //再次改变填充色并作画
+		
+		cxt.fillStyle='green';
+		cxt.fillRect(300,340,20,20);
+		cxt.restore(); //还原一次，回到蓝色
+		cxt.fillRect(300,360,20,20);
+
+		cxt.restore();
+		cxt.fillRect(300,380,20,20);
+		// 堆栈(先进后出，后进先出)
+	</script>
+</body>
+</html>

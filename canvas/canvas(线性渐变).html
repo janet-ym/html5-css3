@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas线性渐变</title>
+</head>
+<body>
+	<canvas width="400" height="400" id="myCanvas" style="border: 2px dashed green;"></canvas>
+	<script>
+		var a=document.getElementById('myCanvas');
+		var cxt=a.getContext('2d');
+
+		var gradient = cxt.createLinearGradient(0,0,myCanvas.width,myCanvas.height);
+		//创建一个渐变的对象，沿着线段从(x0,y0)到(x1,y1)的渐变
+		// createLineGradient(x0,y0,x1,y1)，写法：(0,0,myCanvas.width,myCanvas.height)
+
+		gradient.addColorStop(0,'#fff'); //addColorStop：设置渐变偏移量和颜色
+		gradient.addColorStop(0.5,'#000'); //偏移量=0.5，表示渐变直线中的中间点
+		gradient.addColorStop(1,'#f00'); //偏移量=1，表示渐变直线的终点
+		cxt.fillStyle = gradient;
+		cxt.fillRect(0,0,400,400);
+	</script>
+</body>
+</html>

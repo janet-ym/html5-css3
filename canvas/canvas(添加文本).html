@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(添加文本)</title>
+</head>
+<body>
+	<canvas width="500" height="500" id="myCanvas" style="border:3px solid green;"></canvas>
+	<script>
+	var c = document.getElementById('myCanvas');
+    var cxt = c.getContext('2d');
+
+    cxt.fillStyle = 'lightgreen';
+    cxt.fillRect(30,30,300,300);
+    cxt.fillStyle = '#fff';
+    cxt.strokeStyle = '#fff';
+
+    cxt.font = "bold 40px 微软雅黑"; //字体形式	字体大小	字体
+   	
+    cxt.textAlign = 'left';
+    //textAlign：文字水平对其方式。可取值：start、end、left、center、right，默认值start
+ 
+    // cxt.textBaseline = 'hanging';
+    //文字竖直对齐方式。可取属性值：top、hanging、middle、alphabetic、ideographic、bottom。默认值：alphabetic
+
+    cxt.fillText('文字内容',100,100); //文字内容，横坐标，纵坐标
+
+	</script>
+</body>
+</html>

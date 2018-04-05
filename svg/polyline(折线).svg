@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>  <!-- standalone="no"表示这个svg会引用一个外部文件 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTDSVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"> <!-- version="1.1"指版本 -->
+	<polyline points="0,0 0,20 20,20 20,40 40,40 40,60" style="fill:white; stroke:red; stroke-width:2" />
+	<!-- points：表示组成折线的各个点的坐标，其中每个点的坐标x和y用逗号隔开，两个点之间用空格隔开 -->
+</svg>

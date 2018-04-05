@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(径向渐变)</title>
+</head>
+<body>
+	<canvas width="400" height="400" id="myCanvas" style="border: 2px dashed green;"></canvas>
+	<script>
+		var a=document.getElementById('myCanvas');
+		var cxt=a.getContext('2d');
+
+		var gradient = cxt.createRadialGradient(250,100,10,250,100,100); //同心圆
+		// var gradient = cxt.createRadialGradient(250,70,10,200,60,100);
+		//createRadialGradient(x1,y1,r1,x2,y2,r2)
+		//x1,y1表示渐变起点圆心的坐标
+		//r1，起点圆的半径
+		//x2,y2表示渐变终点圆心的坐标
+		//r2，终点圆的半径
+		gradient.addColorStop(0,'#f00');
+		gradient.addColorStop(1,'#090');
+		cxt.fillStyle = gradient;
+		cxt.fillRect(0,0,400,400);
+	</script>
+</body>
+</html>

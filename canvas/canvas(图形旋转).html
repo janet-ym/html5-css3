@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(图形旋转)</title>
+</head>
+<body>
+	<canvas width="1000" height="1000" id="myCanvas"></canvas>
+	<script>
+	var a=document.getElementById('myCanvas');
+	var b=a.getContext('2d');
+	
+	b.fillStyle="rgba(255,0,0,0.5)";
+	b.fillRect(0,0,200,70);
+	b.translate(150,150);//第一次坐标原点的变化（0,0）变成（150,150）
+	for(var i = 0; i < 5; i++){
+		// b.translate(25,25);
+		b.fillRect(0,0,150,70);
+	}
+	for(var i=0;i<2;i++){
+		b.rotate(Math.PI/6); //rotate(弧度/角度[不带deg单位])
+		b.fillRect(0,0,200,70);
+		b.fillStyle="blue";
+	}
+	</script>
+</body>
+<html>

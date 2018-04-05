@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas绘制圆</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="500" style="border: 2px solid purple;"></canvas>
+	<script type="text/javascript">
+	var c = document.getElementById('canvas');
+	var cxt = c.getContext('2d');
+
+	cxt.fillStyle = "red"; //实心圆
+	cxt.beginPath();
+	cxt.arc(50,50,15,0,Math.PI*2,true); //arc(宽，高，半径，起始角度(PI/2等，PI表示π)，结束角度，逆时针)
+	cxt.closePath();
+	cxt.fill();
+
+	cxt.strokeStyle = "#000"; //空心圆
+	cxt.lineWidth = 3;
+	cxt.beginPath();
+	cxt.arc(50,50,17,0,Math.PI*2,false);
+	cxt.stroke();
+
+	cxt.beginPath();
+	cxt.strokeStyle = 'yellow';
+	cxt.moveTo(100,100);
+	cxt.lineTo(200,150);
+	cxt.lineTo(100,150);
+	cxt.lineTo(100,100);
+	// cxt.lineJoin = 'round';
+	cxt.lineWidth = 5;
+	cxt.stroke();
+	cxt.closePath();
+
+
+
+	</script>
+</body>
+</html>

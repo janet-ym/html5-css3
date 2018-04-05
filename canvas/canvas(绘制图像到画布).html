@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(绘制图像到画布)</title>
+</head>
+<body>
+	<h1>canvas(绘制图像到画布)</h1>
+	<canvas width="800" height="500" id="myCanvas" style="border:2px solid green;"></canvas>
+	<script>
+	var a = document.getElementById('myCanvas');
+	var cxt = a.getContext('2d');
+	var img = new Image(); //创建图像对象
+
+	img.src='01.jpg'; //引用图像
+	img.onload=function(){
+	// cxt.drawImage(img,0,0); //方法一
+	// cxt.drawImage(img,0,0,100,300); //方法二
+	cxt.drawImage(img,10,10,300,300,100,100,150,150); //方法三
+
+	var ptrn = cxt.createPattern(img,'no-repeat'); //设置图像平铺
+	cxt.fillStyle=ptrn;
+	cxt.fillRect(300,0,400,400);
+
+	//drawImage(type,x,y)：type表示类型(image\video\svg+xml)：x，y表示绘制的起始坐标;
+	//drawImage(type,x,y,w,h)：w,h表示在画布上绘制的图像的大小
+	//drawImage(type,sx,sy,sw,sh,dx,dy,dw,dh)：
+	//sx,sy表示原图像的坐标
+	//sw,sh表示在原图像上截取的宽高
+	//dx,dy表示所截取的图像绘制到画布里的坐标
+	//dw,dh表示绘制的图像在画布里显示的大小
+
+	//把图像保存到新的窗口
+	var w= window.open(a.toDataURL("image/png"),"smallwin","width=400,height=350");
+	// toDataURL(type,ratio)，默认type=image/png，type=image/svg+xml，type=image/jpeg可以有第二个参数，
+	// ratio值在0-1(表示jpeg的质量等级)	
+	
+	}
+	</script>
+</body>
+</html>

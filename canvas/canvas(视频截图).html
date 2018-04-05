@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(视频截图)</title>
+</head>
+<body>
+	<video src="movie.mp4" id="vid" controls width="360" height="240">Video cannot be displayed.</video>
+	<div><button id="pressme">一键截图</button></div>
+	<canvas id="canvas" width="360" height="240">Your browser doesnot support the<code>canvas</code>element</canvas>
+	<script>
+	var cxt = document.getElementById('canvas').getContext('2d'); //配置环境
+	var imageElement = document.getElementById('vid'); //获取视频
+
+	document.getElementById('pressme').onclick = function(e){
+		cxt.drawImage(imageElement,0,0,360,240); //(截图，起始坐标x，起始坐标y，宽，高)
+	}
+
+	</script>
+</body>
+</html>

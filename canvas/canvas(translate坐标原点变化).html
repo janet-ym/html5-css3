@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(坐标原点变化)</title>
+</head>
+<body>
+	<canvas width="1000" height="1000" id="myCanvas" style="border:3px solid green;"></canvas>
+	<script>
+		var a=document.getElementById('myCanvas');
+		var b=a.getContext('2d');
+
+		b.fillStyle="rgba(255,0,0,0.5)";
+		b.translate(50,50); //第一次坐标原点的变化（0,0）变成（150,150）
+		b.translate(60,100); //第二次坐标原点的变化（50,50）变成（110,150）
+		b.fillRect(0,0,200,70);
+	</script>
+</body>
+</html>

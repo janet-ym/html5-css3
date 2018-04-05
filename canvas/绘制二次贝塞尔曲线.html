@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绘制二次贝塞尔曲线</title>
+</head>
+<body>
+	<canvas width="600" height="300" id="myCanvas"></canvas>
+	<script>
+	var a = document.getElementById('myCanvas');
+	var b = a.getContext('2d');
+
+	//绘制起始点、控制点、终点
+	b.linewidth = 4;
+	b.beginPath();
+	b.moveTo(20,170);
+	b.lineTo(120,40);
+	b.lineTo(180,150);
+	b.stroke();
+	b.closePath();
+
+	//绘制2次贝塞尔曲线
+	b.beginPath();
+	b.moveTo(20,170);
+	b.quadraticCurveto(130,40,180,150);
+	b.strokeStyle = 'yellow';
+	b.stroke();
+	b.closePath();
+
+	</script>
+
+
+</body>
+</html>

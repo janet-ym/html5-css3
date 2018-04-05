@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(拖拽)</title>
+	<style>
+		#src > * {float:left;}
+		#recycle, #src > img {border: thin solid black; padding: 2px; margin:4px;}
+		#recycle {height: 81px; width: 81px; text-align: center; display: table;}
+		#recycle > p {display: table-cell; vertical-align: middle;}
+		#recycle > img {margin: 1px;}
+		img.dragged{background-color: lightgrey;}
+	</style>
+</head>
+<body>
+	<div id="src">
+		<img draggable="true" src="apple100.png" alt="apple" id="apple">
+		<img draggable="true" src="mango100.png" alt="mango" id="mango">
+		<img draggable="true" src="banana100.png" alt="banana" id="banana">
+		<div id="recycle"><p id="msg">回收站</p></div>
+	</div>
+
+	<script>
+	var src = document.getElementById('src');
+	var recycle = document.getElementById('recycle');
+	var msg = document.getElementById('msg');
+	var draggedID;
+	// recycle.ondragenter = handleDrag;
+	// recycle.ondragover = handleDrag;
+	// function handleDrag(e){
+	// 	e.preventDefault(); //prevent阻止，default(默认)
+	// }
+	src.ondragstart = function(e){
+		draggedID=e.target.id; //被拖动图片的ID赋值给draggedID
+		e.target.classList.add('dragged');	//参数e表示与事件相关的对象的数据，e.target表示拖动的具体对象是图片，classList类名的列表，add('dragged')表示添加一个名叫dragged的类名
+		}
+	src.ondrag = function(e){
+		msg.innerHTML = e.target.id; //innerHTML表示标签里的文本
+	}
+	recycle.ondragenter = function (e){
+		e.preventDefault(); //prevent阻止，default(默认)
+	}
+	recycle.ondragover = function (e){
+		e.preventDefault();
+	recycle.ondrop = function(e){
+		var newImg = document.getElementById(draggedID).cloneNode(false);
+		 //cloneNode(false)：复制被拖动的图片结点
+		recycle.innerHTML = ""; //把文本去掉
+		recycle.appendChild(newImg); //图片结点放到回收站
+		e.preventDefault();
+	}
+		src.ondragend = function(e){
+			e.target.classList.remove('dragged');
+			msg.innerHTML = '还原';
+		}
+		src.ondragend = function(e){
+			var e1 = document.querySelectorAll(".dragged"); //在文档里查找到所有的带'.dragged'的选择器，放进名为e1的数组里
+			for(var i=0; i<e1.length; i++){
+				e1[i].classList.remove("dragged"); //移除每个带'.dragged'的选择器
+			}
+		}
+
+	</script>
+
+</body>
+</html>

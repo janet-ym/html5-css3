@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas组合图形</title>
+</head>
+<body>
+	<canvas width="400" height="400" id="myCanvas" style="border: 2px dashed green;"></canvas>
+	<script>
+	var a = document.getElementById('myCanvas');
+	var cxt = a.getContext('2d');
+	var array = new Array( //数组，存放组合图形操作的取值
+	 "source-atop",//0只显示原有图形占有的区域，但是交集区域只显示新图形的颜色
+	 "source-in",//1只显示叠加的部分，并且只显示新图形的颜色
+	 "source-out",//2只显示新图形的非交集部分
+	 "source-over",//3在原有图形的基础上绘制新图形
+	 "destination-atop",//4只显示新图形占有的区域，但是交集区域只显示原有图形的颜色
+	 "destination-in",//5只显示叠加的部分，并且只显示原有图形的颜色
+	 "destination-out",//6只显示原有图形的非交集部分
+	 "destination-over",//7在原有图形下绘制新图形
+	 "lighter",//8原有图形和新图形都显示，交集部分做浅色颜色叠加
+	 "darker",//9原有图形和新图形都显示，交集部分做深色颜色叠加，在Safari和欧朋下有效
+	 "copy",//10只显示新图形
+	 "xor"//11混合区域隐藏
+	);
+
+	var i = 4;
+	cxt.fillStyle="blue";
+	cxt.fillRect(100,100,100,100);
+	cxt.fillStyle="red";
+	cxt.globalCompositeOperation=array[i]; //组合图形操作(array)
+	cxt.beginPath();
+	cxt.arc(200,200,50,0,Math.PI*2,false);
+	cxt.fill();
+	</script>
+</body>
+</html>

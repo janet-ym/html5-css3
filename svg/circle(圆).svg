@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>  <!-- standalone="no"表示这个svg会引用一个外部文件 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTDSVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"> <!-- version="1.1"指版本 -->
+	<circle cx='150' cy='150' r='50' style='stroke:blue; fill-opacity:0.1; stroke-opacity:0.7; stroke-width:5; '/>
+	<!-- cx/cy：表示圆的x和y坐标，r表示圆的半径，fill缺省时是黑色，stroke-opacity：轮廓的不透明度(通用); fill-opacity：填充的不透明度 -->
+</svg>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绘制三次贝塞尔曲线</title>
+</head>
+<body>
+	<canvas width="600" height="300" id="myCanvas"></canvas>
+	<script>
+	var a = document.getElementById('myCanvas');
+	var cxt = a.getContext('2d');
+
+	//绘制起始点、控制点、终点
+	cxt.linewidth = 2
+	cxt.fillStyle="red";
+	cxt.strokeStyle="red";
+	cxt.beginPath();
+	moveTo(100,100);
+	lineTo(60,90);
+	lineTo(60,350);
+	lineTo(100,100);
+ 	
+ 	//绘制三次贝塞尔曲线
+	cxt.beginPath();
+	cxt.moveTo(100,100);
+	cxt.bezierCurveTo(60,90,60,350,100,400);
+	cxt.strokeStyle = 'red';
+
+	</script>
+
+</body>
+</html>

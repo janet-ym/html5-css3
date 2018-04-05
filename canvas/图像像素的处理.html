@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图像像素的处理</title>
+</head>
+<body>
+	<h1>图像像素的处理</h1>
+	<canvas width="800" height="500" id="myCanvas" style="border:2px solid green;"></canvas>
+	<script>
+	var cxt = document.getElementById('myCanvas').getContext('2d');
+	var img = new Image(); //创建图像对象
+	
+	img.src='02.jpg'; //引用图像
+	img.onload=function(){
+
+	cxt.drawImage(Image,0,0);
+	var imagedata=cxt.getImageData(0,0,30,30);
+	//复制图像上指定矩形的像素数据
+	//getImageData(x,y,w,h)
+	//x,y表示图像的坐标
+	//w,h所要获得图像上指定区域的大小
+	for (var i = 0; n=imagedata.data.lenght; i < n; i+=4) {
+		imagedata.data[i+0]=255-imagedata.data[i+0]; //操作红色像素数组的数据
+		imagedata.data[i+1]=255-imagedata.data[i+1];
+		imagedata.data[i+2]=255-imagedata.data[i+2];
+	};
+		content.putImageData(imagedata,0,0); //将图像数据放回画布，putImageData(img,x,y)
+	}
+	</script>
+</body>
+</html>
