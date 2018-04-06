@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单新属性</title>
+</head>
+<body>
+	<pre>
+	<h3>新的form属性：</h3>
+	autocomplete：自动完成输入，取值on/off;
+	novalidate（布尔值）：禁止验证，使required\email\url的验证失效;
+	<h3>新的input属性：</h3>
+	autocomplete
+	autofocus(布尔值)：用于控件自动获取焦点
+	form
+	form overrides
+	formenctype,formmethod
+	formnovalidate,formtarget
+	width和height：input行内块级，image加width和height可以精确控制宽高;
+	list：和datalist一起用，用来指定文本框的可选项,相比select的优点是可以输入min、max和step;
+	multiple：多选，与size配合使用，size限定最多个数；
+	pattern(regexp)：模式匹配(正则表达式);
+	placeholder：用于文本框在未输入时起提示作用;
+	required：表示必填;
+	</pre>
+
+	<pre>
+		<form action="2.php">
+			请选择上传的文件：<input type="file" multiple size="4">
+			图片：<input type="image" src="" width="50px" height="40px">
+			邮箱：<input type="email" autocomplete="on" autofocus>
+			网址：<input type="url">
+			所属省份：<input type="text">
+			<input type="submit" value="提交">
+		</form>
+	</pre>
+</body>
+</html>

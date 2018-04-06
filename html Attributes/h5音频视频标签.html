@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5音频视频标签</title>
+</head>
+<body>
+	<pre>
+	audio属性：
+	1、controls(布尔值)：是否显示控制台，默认取值false;
+	2、autoplay(布尔值)：自动播放，默认取值false;
+	3、loop：控制循环播放;
+	4、preload：预加载，取值auto(页面加载是载入整个音频)、取值meta(页面加载后只载入元数据)、取值none(当页面载入后不加载音频)，当设置了autoplay时，preload会被忽略;
+	5、src：指定音频的url地址;
+	</pre>
+
+	<!-- 音频格式：mp3、ogg、wav;
+		 1、最少的代码;
+		 2、不兼容提醒的代码(浏览器不支持标签时，会把标签当做div);
+		 3、兼容浏览器的写法;-->
+	<audio src="赵雷 - 成都.mp3" controls loop="3" preload="auto">您的浏览器不支持audio标签</audio>
+
+	<!-- 兼容性写法：浏览器会读取第一个可识别的格式 -->
+	<audio>
+		<source src="赵雷 - 成都.mp3"></source>
+		<source src="love.ogg"></source>
+		<source src="love.wav"></source>
+	</audio>
+
+	<!-- 视频video -->
+	<!-- 视频支持格式： ogg(火狐、Opera、Chrome);
+						mpeg4(Safari);
+						webm -->
+	<video src="movie.mp4">您的浏览器不支持video标签</video>
+	<video controls height="200" width="300">
+		<source src="movie.ogg" type="video/ogg"></source>
+		<source src="movie.mp4" type="video/mp4"></source>
+		Your browser does not support the video tag.
+	</video>
+</body>
+</html>

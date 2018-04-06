@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		progress {border: 1px solid #000; background-color:#fff;
+		 color: yellow;} /* IE10 */
+		progress::-moz-progress-bar { background: yellow;} /* 已经完成的进度条(火狐Mozilla) */
+		progress::-webkit-progress-bar { background: #fff;} /* 全部的进度条 */
+		progress::-webkit-progress-value  { background: yellow;} /* 已经完成的进度条（谷歌/safari）*/
+	</style>
+</head>
+<body>
+	<progress max="100" value="45"></progress><span>45%</span>
+</body>
+</html>

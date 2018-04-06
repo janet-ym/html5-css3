@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>条件注释</title>
+<!--[if IE]><body bgcolor="red"></body><![endif]-->
+</head>
+<body>
+	<pre>
+	条件注释(conditional comments)是一种安全的区分IE浏览器版本的语法，且被认为是取代针对IE css hack的首选方法。
+	条件注释只能用于IE5以上。
+	如果安装了多个版本的IE，会以最高版本的IE为标准。
+	写法：<!- ->，和html注释写法一样,因此IE以外的浏览器会把他们当成普通的注释语句，从而忽略。
+	<!--[if IE]>用于IE(6、7、8、9)<![endif]-->
+	<!--[if IE 6]>用于IE6<![endif]-->
+	<!--[if IE 7]>用于IE7<![endif]-->
+	<!--[if IE 8]>用于IE8<![endif]-->
+	<!--[if IE 9]>用于IE9<![endif]-->
+	<!--[if gt IE 6]>用于IE6以上的版本<![endif]-->
+	<!--[if lte IE 7]>用于IE7或更低的版本<![endif]-->
+	<!--[if gte IE 8]>用于IE8或更高的版本<![endif]-->
+	<!--[if lt IE 9]>用于IE9以下的版本<![endif]-->
+	<!--[if !IE]>用于非IE<![endif]-->
+	</pre>
+</body>
+</html>

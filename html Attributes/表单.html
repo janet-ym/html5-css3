@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<h3>kengen</h3><!-- 对表单某些字段加密 -->
+	<form action="demo_keygen" method="post">
+		username:<input type="text"> <br /><br />
+		Encryption<keygen name="security">
+		<input type="submit">
+	</form>
+
+	<h3>form表单中新增的form属性</h3> 
+	<!-- form属性使表单元素更加灵活，表单元素可以写在form外，只需要给表单元素添加form='num1'，与form标签中id名一样，也可以提交到form元素所指定的服务器里面（upload.php） -->
+	<form action="upload.php" id="num1">
+		<input type="checkbox">red
+	</form>
+	<input type="checkbox" form="num1">red
+	<input type="submit" value="提交">
+
+<h3></h3>
+<pre>
+标签：input\button\textarea\select\option
+input类型属性值：text\password\radio\checkbox\file	
+input新增输入类型：
+1、email（验证email地址，其中placeholder提示语,required表示此输入框是否必填，默认true）;
+2、url(验证URL的格式，当提交表达时会自动验证表单格式);
+3、range和number(用于输出计算结果，range显示为滑动条);
+4、color(拾色器);
+5、Date Pickers(日期选择器,包括date、month、week、time、datetime、date-local);
+
+<form action="">
+邮箱：<input type="email" placeholder="12345@qq.com" required> <br />
+个人主页：<input type="url">
+<input type="submit" value="提交">
+</form>
+
+<!--step属性：设定每次增长的步长; 
+	parseInt(a.value)取整数;
+	oninput当元素获取用户输入时运行脚本;
+	output标签作为计算结果显示;
+	output的for属性描述计算结果与元素之间的关系 -->
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+四则计算：10<input type="range" id="a" value="20" min="10" max="200">200+<input type="number" id="b" value="50" step="5">=<output name="x" for="a b">100</output>
+</form>
+
+<form action="#" method="post">
+color：拾色器 <li><input type="color" value="#ff0"></li>
+Date：选取年、月、日 <li><input type="date"></li>
+month：选取年、月 <li><input type="month"></li>
+week：选取年、周 <li><input type="week"></li>
+time：时间 <li><input type="time"></li>
+datetime：UTC时间，世界标准时间 <li><input type="datetime"></li>
+date-local：本地时间 <li><input type="date-local"></li>
+
+年龄：<input type="number" min="18" max="50">
+薪水：2000<input type="range" value="2000" min="2000" max="10000">10000
+
+seach：<input type="seach" results='s'>
+<input type="submit">
+</form>
+
+</pre>
+
+</body>
+</html>

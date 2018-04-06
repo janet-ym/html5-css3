@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5部分新标签</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h2>1、mark标签:</h2>
+	<p>段落<mark>标记</mark>段落</p>
+
+	<h2>2、time标签:</h2>
+	<p>发布日期：<time datetime="2017-02-21T14:00Z">14:00</time>
+	<time datetime="2016-09-28T01:01Z" pubdate></time></p>  <!-- Z是间隔日期和时间的utc时间表示法 -->
+
+	<h2>3、details标签:</h2> <!-- 谷歌支持，其他不支持。open：定义 details 是否可见。 -->
+	<details open>	
+		<summary>水果种类</summary>
+		<ul>
+			<li>苹果</li>
+			<li>香蕉</li>
+			<li>梨</li>
+		</ul>
+	</details>
+
+	<h2>3、datalist标签</h2>
+	<form>
+		<input list="1">
+		<datalist id="1">
+			<option value="苹果">苹果</option>
+			<option value="香蕉">香蕉</option>
+			<option value="梨">梨</option>
+		</datalist>
+	</form>
+
+	<h2>4、progress标签</h2>
+	<progress max="100" value="85"></progress><span>85%</span>
+	<h2>5、ruby标签</h2> <!-- 中文注音或字符 -->
+	<ruby>
+		漢<rp><rt>Han</rt></rp>
+		<!-- rt写字符的解释或发音 -->
+		字<rp><rt>Zi</rt></rp>
+		<!-- rp用来定义不支持ruby标签的浏览器所显示的内容 -->
+	</ruby>
+
+	<h2>wbr(Word break Opportunity)规定在文本中何处添加换行</h2>
+	<p>wbr表示，根据显示宽度自动换行，比如足够显示后面的文字就不会换行</p>
+</body>
+</html>

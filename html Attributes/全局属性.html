@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全局属性</title>
+</head>
+<body>
+	<h2><pre>
+	对于文档中的任何一个标签都能使用的属性（html中的id、class）:
+	1、data-*:自定义属性(*代表的是自定义的属性名称，比如data-sex、data-id等; 用data是为了避免与未来的html版本冲突);
+	2、hidden：表示元素的不可见状态（取值为布尔类型true/false);
+	3、spellcheck：规定对元素进行拼写或语法的检查;
+	4、tabindex：规定元素的tab键切换顺序(用于导航);
+	5、contenteditable允许用户编辑内容(修改页面的局部内容);
+	6、designMode：允许用户编辑内容(修改整个页面内容,通过JS使用,取值为'on'、'off');
+	7、accesskey：允许设置一个或多个键盘快捷键,配合alt键使用;
+	</pre></h2>
+	<h2><pre>
+	data-*使用说明:
+	1、获取自定义属性(获取时通过dataset对象，使用‘.’来获取属性，需要去掉data-前缀);
+	2、获取带连字符的自定义属性驼峰式命名法（user-sex → userSex）
+	</pre></h2>
+
+	<h2>标签效果demo</h2>
+	<h3>1、data-*属性</h3>
+	<div data-sex='女' data-shenfen='student' id='ym'>杨敏</div>
+
+	<h3>获取自定义属性JS</h3>
+	<script>
+	var ym=document.getElementById('ym'); //获取div的名字(id的名字)
+	// alert(ym.dataset.sex) 浏览器弹出表示性别信息
+	alert(ym.dataset['sex'])  //另一种写法
+	</script>
+
+	<h3>2、hidden属性</h3>
+	<div hidden="true">看不见</div>
+
+	<h3>3、spellcheck属性</h3>
+	<form action="">
+		<textarea name="" id="" cols="30" rows="10" spellcheck=""></textarea>
+	</form>
+
+	<h3>4、tabindex属性、accesskey属性</h3>
+	<form action="">
+		<pre>
+			姓名:<input type="text" tabindex="3" accesskey="3">
+			电话:<input type="text" tabindex="1" accesskey="1">
+			学号:<input type="text" tabindex="4" accesskey="4">
+			地址:<input type="text" tabindex="2" accesskey="2">
+		</pre>
+	</form>
+
+	<h3>5、contenteditable属性</h3> <!-- 是否可以编辑页面内容，true表示可以 -->
+	<p contenteditable>编辑内容</p>
+
+	<h3>6、designMode属性</h3> <!-- 是否可以编辑页面内容，指整个页面，true表示可以 -->
+	<script>
+	window.document.designMode='on'
+	</script>
+	
+</body>
+</html>
