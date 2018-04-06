@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴案例(:checked方法)</title>
+	<style type="text/css">
+		#content2{width: 600px; height: auto; box-sizing: border-box; border: 1px solid #ccc;}
+		#content2 div{transition: height 0.4s ease-in-out;}
+		#content2 label{font: 24px/32px '微软雅黑'; color: lightgreen; margin: 0; cursor: pointer; height: 80px;}
+		#content2 label::before{content: '\2610'; width: 20px; height: 20px; border-radius: 10px; background-color: #ccc; display: inline-block; color: rgba(0,0,0,0.5); text-align: center; font-size: 16px; line-height: 20px;}
+		#content2 input[type^='radio']{display: none;}
+		#content2 input[type^='radio']:checked+label::before{content: '\2611'; color: red;}
+		#content2 p{display: none;}
+		#content2 input[type^='radio']:checked~p{display: block;}
+	</style>
+</head>
+<body>
+	<h1>:checked实现手风琴效果</h1>
+	<div id="content2">
+		<div>
+			<input type="radio" name="danxuan" id="demo1">
+			<label for="demo1">君子曰：学不可以已。</label>
+			<p>靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+		</div>
+		<div>
+			<input type="radio" name="danxuan" id="demo2">
+			<label for="demo2">青，取之于蓝，而青于蓝</label>
+			<p>靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+		</div>
+		<div>
+			<input type="radio" name="danxuan" id="demo3">
+			<label for="demo3">冰，水为之，而寒于水</label>
+			<p>靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+		</div>
+		<div>
+			<input type="radio" name="danxuan" id="demo4">
+			<label for="demo4">木直中绳，輮以为轮，其曲中规</label>
+			<p>靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+		</div>
+	</div>
+</body>
+</html>

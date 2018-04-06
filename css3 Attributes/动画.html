@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style type="text/css">
+		.animation{width: 30px;height: 30px;background: yellow;
+
+			animation:change 3s;  /*综合属性*/
+			animation-name:change;  /*动画名称*/
+			animation-duration: 1s;  /*动画持续时间*/
+			/*以上两个必须*/
+
+			animation-timing-function: linear;  /*动画速度*/
+			animation-delay: 2s;  /*动画延迟多久之后执行*/
+			animation-iteration-count: 1;  /*播放次数（数字/循环）*/
+			animation-direction:alternate;  /*动画方向*/
+			animation-fill-mode: forwards;  /*动画结束状态*/
+			animation-play-state: paused;  /*动画播放状态 属性pouse暂停*/
+
+		}
+
+		/* 动画序列 */
+		@keyframes change{
+			0%{width: 40px;height: 40px;}
+			100%{width: 200px;height:200px}
+		}
+		
+	</style>
+<body>
+	<div class= "animation"></div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IE7,8下画圆</title>
+	<style>
+		body, ul, li, dl, dt, dd, h1, h2, h3, h4, h5 {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: #F7F7F7;
+		}
+
+		.wrapper {
+			width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		header {
+			padding: 20px 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		header h3 {
+			line-height: 1;
+			font-weight: normal;
+			font-size: 28px;
+		}
+
+		.main {
+			/*overflow: hidden;*/
+		}
+
+		.main:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+
+		.main .item {
+			width: 210px;
+			height: 210px;
+			margin: 0 30px 30px 0;
+			/*display: flex;*/
+			position: relative;
+			background-color: #FFF;
+			float: left;
+			box-shadow: 2px 2px 5px #CCC;
+		}
+		
+		.main .item:after {
+			content: attr(data-brief);
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 210px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #FFF;
+			font-family: '微软雅黑';
+			font-size: 18px;
+			background-color: rgba(170, 170, 170, 0);
+			z-index: -1;
+			transition: all 0.3s ease-in;
+		}
+
+		.main .item:hover:after {
+			background-color: rgba(170, 170, 170, 0.6);
+			z-index: 100;
+		}
+
+		.main .item:nth-child(4n) {
+			margin-right: 0;
+		}
+
+		/*.main .item:nth-last-child(-n+5) {
+			margin-bottom: 0;
+		}*/
+
+		/* 以上是骨架样式 */
+
+		.border-style{width: 50px;height: 50px;margin:auto;overflow: hidden}
+		.dotted{width: 100%;height: 100%;border-style: dotted;border-color: red;
+			border-width: 50px;}
+		
+		.father{position: relative;overflow: visible;}
+		.son{width: 150px;height: 100px;background: red;position: absolute;left: 0;top:25px;}
+		.son1{width: 100px;height: 150px;background: red;position: absolute;left: 25px;top:0px;}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h3>IE7,8下画圆</h3>
+		</header>
+		<div class="main">
+			<div class="item" data-brief="整圆">
+				<div class="border-style">
+					<div class="dotted"></div>
+				</div>
+			</div>
+			<div class="item" data-brief="圆角矩形">
+				<div class="border-style father">
+					<div class="dotted"></div>
+					<div class="son"></div>
+					<div class="son1"></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标悬停按钮边框动画特效</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{background: lightblue;}
+		ul{list-style: none;}
+		a{text-decoration: none;}
+		ul{width: 150px; height: 50px; margin: 200px auto 0;}
+		ul>li{width: 150px; height: 50px; background:#1AAB8A; transition: all 0.5s; position: relative;}
+		ul>li>a{display: inline-block; width: 150px; height: 50px; font: 18px/50px 'arial'; text-align: center; color: #fff;}
+		ul>li:hover{background: #fff;}
+		ul>li:hover a{color: #1AAB8A;}
+		ul>li::before,ul>li::after{content: ''; width: 150px; height: 2px; display: block; background: #1AAB8A; position: absolute; left: 0; transition: all 4.0s;}
+		ul>li::before{top: 0; width: 0; left: 150px;}
+		ul>li::after{bottom: 0; width: 0; right: 150px;}
+		ul>li:hover::before{width: 150px; left: 0;}
+		ul>li:hover::after{width: 150px; right: 0;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="">Hello&nbsp;World!</a></li>
+	</ul>
+</body>
+</html>

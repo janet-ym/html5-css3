@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跳动的心</title>
+	<style type="text/css">
+		body{background-color: lightblue;}
+		.heart{width: 200px; height: 200px; position: relative; margin: 100px auto 0;
+		animation: heart 1s ease-in infinite;}
+		.left,.right{width: 200px; height: 100px; border-radius: 100px 100px 0 0; background: red; display: inline-block; position: absolute;}  /* 绘制除整圆以外的圆形状，宽高不使用百分比 */
+		.left{left: -105px; top: 20px; transform: rotate(-45deg);}
+		.right{right: -105px; top: 20px; transform: rotate(45deg);}
+		.bottom{width: 200px; height: 200px; background: red; display: block; position: absolute; transform: rotate(45deg); top: 75px;}
+
+		@keyframes heart{
+			0%{transform: scale(1);}
+			50%{transform: scale(1.2);}
+			100%{transform: scale(1);}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="heart">
+		<span class="left"></span>
+		<span class="right"></span>
+		<span class="bottom"></span>
+	</div>
+</body>
+</html>

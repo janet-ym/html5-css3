@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>综合应用</title>
+	<style>
+		ul li:first-child{color: red;}
+		body ul li:last-child{color: green;} /* 父元素ul的最后一个子元素，并且该子元素匹配li */
+		body ul li:only-child{color: purple;}
+		ul li:nth-child(2){color: pink;}
+		ul :nth-child(2){text-decoration: underline;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>第一项</li>
+		<li>第二项</li>
+		<li>第三项</li>
+		<li>第四项</li>
+		<li>第五项</li>
+	</ul>
+	<ul>
+		<li>第一项</li>
+		<a>第二项</a>
+		<li>第三项</li>
+		<li>第四项</li>
+		<a>第五项</a>
+	</ul>
+	<ul>
+		<li>only-child只有一个孩子li的</li>
+	</ul>
+	<ul>
+		<a>only-child只有一个孩子a的</a>
+	</ul>
+</body>
+</html>

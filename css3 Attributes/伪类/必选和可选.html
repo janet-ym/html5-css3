@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>required和optional</title>
+	<style>
+		:required{outline: medium solid green;}  /* 必须的 */
+		:optional{outline: medium solid red;}  /* 可选的 */
+	</style> 
+</head>
+<body>
+	<form action="">
+		<p>
+			<label for="price1">
+			姓名：<input type="text" required value="1" id="username">
+			</label>
+		</p>
+		<p>
+			<label for="address">
+			地址：<input type="text">
+			</label>
+		</p>
+		<button type="submit">submit</button>
+	</form>
+</body>
+</html>

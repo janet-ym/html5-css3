@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>E[attr$=val]</title>
+	<style>
+		.attr6 a[class$="download"]{color: red;}
+		/* 表示的属性值里包含val字符并且在‘结束’位置 */
+	</style>
+</head>
+<body>
+	<section class="attr6">
+		<header>E[attr$=val]</header>
+		<div class="wrap-box">
+			<a href="./a.rmvb" class="download">下载</a>
+			<a href="./b.rmvb" class="moviedownload">下载</a>
+			<a href="./a.mp3" class="downloadmusic">下载</a>
+			<a href="./a.mp3" class="download-music">下载</a>
+		</div>
+	<section>
+</body>
+</html>

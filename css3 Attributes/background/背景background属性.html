@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景属性</title>
+	<style>
+		div{width: 200px; height: 200px; margin: 100px auto; padding: 50px; border: 5px dashed red; background-color: yellow;
+		/* background复合属性：bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+		background: yellow url(images/bg.jpg) no-repeat content-box border-box ;
+
+		/* 背景的裁剪,取值为：border-box(默认背景填充区域(边框盒子,默认值)),padding-box(内边距盒子),content-box(内容盒子) */
+			background-clip: border-box;
+		/* content-box(背景图像的相对位置的内容框)，border-box(背景图像边界框的相对位置)， padding-box(背景图像填充框的相对位置) */
+			background-origin: content-box;
+		/* 指定背景图像的位置 */
+			background-position: center;
+		/* 图像的附着方式：fixed(固定)/scroll(滚动)/inherit(继承) */
+			background-attachment: fixed;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

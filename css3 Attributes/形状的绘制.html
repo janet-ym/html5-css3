@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>形状的绘制</title>
+	<style>
+		body, ul, li, dl, dt, dd, h1, h2, h3, h4, h5 {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: #F7F7F7;
+		}
+
+		.wrapper {
+			width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		header {
+			padding: 20px 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		header h3 {
+			line-height: 1;
+			font-weight: normal;
+			font-size: 28px;
+		}
+
+		.main {
+			/*overflow: hidden;*/
+		}
+
+		.main:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+
+		.main .item {
+			width: 210px;
+			height: 210px;
+			margin: 0 30px 30px 0;
+			/*display: flex;*/
+			position: relative;
+			background-color: #FFF;
+			float: left;
+			box-shadow: 2px 2px 5px #CCC;
+		}
+		
+		.main .item:after {
+			content: attr(data-brief); /* 调用data-brief方法(自定义方法) */
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 210px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #FFF;
+			font-family: '微软雅黑';
+			font-size: 18px;
+			background-color: rgba(170, 170, 170, 0);
+			z-index: -1;
+			transition: all 0.3s ease-in;
+		}
+
+		.main .item:hover:after {
+			background-color: rgba(170, 170, 170, 0.6);
+			z-index: 100;
+		}
+
+		.main .item:nth-child(4n) {
+			margin-right: 0;
+		}
+
+		/*.main .item:nth-last-child(-n+5) {
+			margin-bottom: 0;
+		}*/
+
+		/* 以上是骨架样式 */
+
+				.border-radius{width: 180px; height: 180px; margin: auto; border: 1px solid red;}
+/* 整圆 */		.item:first-child .border-radius{border-radius: 90px;}
+/* 拱形 */		.item:nth-child(2) .border-radius{border-radius: 90px 90px 0 0;}
+/* 半圆 */		.item:nth-child(3) .border-radius{height: 90px; border-radius: 90px 90px 0 0;}
+/* 左上角圆 */	.item:nth-child(4) .border-radius{border-radius: 90px 0 0 0;}
+/* 四分之一圆 */.item:nth-child(5) .border-radius{width: 90px; height: 90px; border-radius: 90px 0 0 0;}
+/* 横椭圆 */	.item:nth-child(6) .border-radius{height: 90px; border-radius: 90px/45px;}
+/* 竖椭圆 */	.item:nth-child(7) .border-radius{width: 90px; border-radius: 45px/90px;}
+/* 半个上横椭圆 */.item:nth-child(8) .border-radius{height: 45px; border-radius: 90px 90px 0 0/45px 45px 0 0;}
+/* 半个左竖椭圆 */.item:nth-child(9) .border-radius{width: 45px; border-radius: 45px 0 0 45px/90px 0 0 90px;}
+/* 半个右竖椭圆 */.item:nth-child(10) .border-radius{width: 45px; border-radius: 0 45px 45px 0/0 90px 90px 0;}
+/*1/4椭圆*/	.item:nth-child(11) .border-radius{width: 45px; height: 90px; border-radius: 0 45px 0 0/0 90px 0 0;}
+/* 圆环 */.item:nth-child(12) .border-radius{width: 40px; height: 40px; border-radius: 90px; border-width: 70px;}
+/* 铜钱 */.item:nth-child(13) .border-radius{width: 40px; height: 40px; border-radius: 45px; border-width: 70px;}
+
+
+
+/* 1/4圆环 */.item:nth-child(14) .border-radius{width: 60px; height: 60px; border-radius: 90px 0 0 0; border-width: 70px;}
+/* 右上左下圆环 */.item:nth-child(15) .border-radius{width: 60px; height: 60px; border-radius: 90px 0 90px 0; border-width: 70px;}
+/* 3/4实心圆 */.item:nth-child(16) .border-radius{width: 0; height: 0; border-radius: 90px; border: 60px solid transparent; border-top-color: red; border-left-color: red; border-bottom-color: red;}
+/* 1/4实心圆 */.item:nth-child(17) .border-radius{width: 0; height: 0; border-radius: 90px; border: 60px solid transparent; border-right-color: red;}
+
+/* 1/4实心圆 */.item:nth-child(18) .border-radius{width: 0; height: 0; border-radius: 90px; border: 60px solid transparent; border-top-color: red; border-bottom-color:  green; border-left-color: green; border-right-color:red;}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h3>模板</h3>
+		</header>
+		<div class="main">
+			<div class="item" data-brief="整圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="拱形">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="半圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="左上角圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="四分之一的圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="横椭圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="竖椭圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="半个上横椭圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="半个左竖椭圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="半个右竖椭圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="四分之一的椭圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="圆环">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="铜钱">
+				<div class="border-radius"></div>
+			</div>
+
+
+
+
+			<div class="item" data-brief="1/4圆环">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="右上左下圆环">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="3/4实心圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="1/4实心圆">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="铜钱">
+				<div class="border-radius"></div>
+			</div>
+			<div class="item" data-brief="铜钱">
+				<div class="border-radius"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

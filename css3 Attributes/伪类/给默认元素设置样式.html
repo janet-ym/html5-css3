@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>default</title>
+	<style>
+		:default{outline: medium solid red;}
+	</style>
+</head>
+<body>
+	<form action="http://titan:8080/form" method="post">
+		<p>
+			<label for="apples">Do you like apples:</label>
+			<input type="checkbox" id="apples" name="apples">
+			<span>This will go red when checked</span>
+		</p>
+		<button type="submit">Submit</button>
+		<button type="reset">Reset</button>
+	</form>
+</body>
+</html>

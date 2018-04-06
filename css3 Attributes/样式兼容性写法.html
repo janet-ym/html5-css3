@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>兼容性写法</title>
+	<style type="text/css">
+		input::-webkit-input-placeholder{color: red;} /* chrome和Safari */
+		input::-moz-input-placeholder{color: red;} /* firefox */
+		input::-ms-input-placeholder{color: red;} /* IE */
+		input::-o-input-placeholder{color: red;} /* Opera */
+		input::placeholder{color: red;} /* 标准写法 */
+	</style>
+</head>
+
+<body>
+	<form action="" method="post">
+		姓名：<input type="text" placeholder="请输入您的姓名">
+	</form>
+</body>
+</html>
+ 

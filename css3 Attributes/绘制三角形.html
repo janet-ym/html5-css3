@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绘制三角形</title>
+	<style>
+		.test-div{width: 150px; height: 36px; border-radius: 5px; border: black 1px solid; background: yellow; position: relative;}
+		.test-div::before{content: ""; /* content是::before和::after必带的 */  display: block;
+		position: absolute; width: 0; height: 0; border: 6px transparent solid; border-right-color: green; left: -12px; top: 12px;}
+
+		.triangle{width: 0; height: 0; border-left: 50px solid red; border-bottom: 50px solid blue; border-top: 50px solid black; border-right: 50px solid purple;}
+		.triangle{width: 0; height: 0;
+		border: 50px transparent solid; /* transparent表示边框颜色为透明 */
+		border-right-color: red;  /* top为三角形底边 */}
+	</style>
+</head>
+<body>
+	<!-- <div class="test-div"></div> -->
+	<div class="triangle"></div>
+</body>
+</html>

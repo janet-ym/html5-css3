@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checked</title>
+	<style>
+		:checked + span {background-color: red; color: white; padding: 5px; border: medium solid black;}
+		/* :checked被选中的；+表示紧邻的后一个兄弟元素 */
+	</style>
+</head>
+<body>
+	<form action="http://titan:8080/form" method="post">
+		<p>
+			<label for="apples">Do you like apples:</label>
+			<input type="checkbox" id="apples" name="apples">
+			<span>This will go red when checked</span>
+		</p>
+		<input type="sumbit" value="Submit">
+	</form>
+</body>
+</html>

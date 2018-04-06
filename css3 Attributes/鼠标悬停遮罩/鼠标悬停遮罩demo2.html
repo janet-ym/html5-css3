@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标悬停遮罩demo2</title>
+	<style type='text/css'>
+	body,ul,li,p,h1{margin: 0; padding: 0;}
+	ul{list-style: none;}
+	img{vertical-align: middle; border: 0;}
+	a{text-decoration: none; display: block;}
+
+	.box{width: 800px; height: 400px; background-color: #444; display: flex;}
+	.box ul{width: 440px; height: 210px; margin: auto;}
+	.box ul li{width: 210px; height: 210px; box-sizing: border-box; border: 5px solid #fff; float: left; overflow: hidden;}
+	.box ul li:first-child{margin-right: 20px;}
+	.box ul li img{transition: all 0.3s;}
+	.box ul li .mask{width: 200px; height: 200px; background: rgba(255,20,30,0.8); color: #fff; text-align: center; overflow: hidden; transform: translateY(-400px); transition: all 0.5s;}
+	.box ul li .mask h1{font-size: 14px; margin: 35px auto 15px;}
+	.box ul li .mask p{font-size: 12px;}
+	.box ul li .mask a{width: 95px; height: 30px; background-color: #4d92d9; box-sizing: border-box; border: 2px solid #4d92d9; margin: 15px auto 0; color: #fff; font-family: '宋体'; line-height: 30px; text-align: center; transition: all 0.3s;}
+	.box ul li .mask a::first-letter{text-transform: capitalize;}
+	.box ul li:hover .mask{transform: translateY(-200px);}
+	.box ul li .mask a:hover{background: transparent; color: #4d92d9;}	
+	.box ul li:hover img{transform: scale(1.2);}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<img src="images/demo2.jpg" alt="">
+				<div class="mask">
+					<h1>Alice</h1>
+					<p>来自美国加州来自美国加州来自美国加州来自美国加州来自美国加州</p>
+					<a href="">learn more</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/demo2.jpg" alt="">
+				<div class="mask">
+					<h1>Alice</h1>
+					<p>来自美国加州来自美国加州来自美国加州来自美国加州来自美国加州</p>
+					<a href="">learn more</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

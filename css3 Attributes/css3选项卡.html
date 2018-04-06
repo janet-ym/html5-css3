@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3选项卡</title>
+	<style type="text/css">
+		body,ul,li{margin: 0; padding: 0;}
+		ul{list-style: none;}
+		li{text-decoration: none;}
+
+		section>ul>li{width: 100px; height: 45px; float: left; position: relative;}
+		section>ul>li>label{background: #6A9E52; width: 100px; height: 45px; display: block; text-align: center; font: 16px/45px '微软雅黑'; color: #fff;}
+		section>ul>li>input[type='radio']{position: absolute; left: -234px;}
+
+		section>ul>li>div{width: 400px; height: 250px; background: #6A9E52; color: #fff; position: absolute; top: 45px; left: 0; display: none;}
+		section>ul>li>div[id='div02']{left: -100px;}
+		section>ul>li>input[id^='tab0']:checked + label{background: green;}
+		section>ul>li>input[id^='tab0']:checked ~ div{display: block; background: green;}
+		
+	</style>
+</head>
+<body>
+	<section>
+		<ul>
+			<li>
+				<input type="radio" id="tab01" name="check" checked>
+				<label for="tab01">选项卡1</label>
+				<div id="div01">选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1选项卡1</div>
+			</li>
+			<li>
+				<input type="radio" id="tab02" name="check">
+				<label for="tab02">选项卡2</label>
+				<div id="div02">选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2选项卡2</div>
+			</li>
+		</ul>
+	</section>
+</body> 
+</html>

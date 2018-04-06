@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3过渡动画</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			background-color: #F7F7F7;
+		}
+
+		.wrapper {
+			width: 1024px;
+			margin: 0 auto;
+		}
+
+		.wrapper > section {
+			min-height: 300px;
+			margin-bottom: 30px;
+			box-shadow: 1px 1px 4px #DDD;
+			background-color: #FFF;
+		}
+
+		.wrapper > header {
+			text-align: center;
+			line-height: 1;
+			padding: 20px;
+			margin-bottom: 10px;
+			font-size: 30px;
+		}
+
+		.wrapper section > header {
+			line-height: 1;
+			padding: 10px;
+			font-size: 22px;
+			color: #333;
+			background-color: #EEE;
+		}
+
+		.wrapper .wrap-box {
+			padding: 20px;
+		}
+
+
+	/*	旋转*/
+		.box{width: 200px;height:200px;background: lightgreen;margin: 15px auto;transition: all 1s}
+		.box:hover{transform: rotate(45deg);}/*transform:转换  1.旋转：顺时针（正数）逆时针（负数）rotate(0deg),deg角度*/
+		
+		.box1{width: 200px;height:200px;background: lightgreen;margin: 15px auto;transition: all 1s}
+		.box1:hover{transform: scale(2,0.5);}
+		/*transform：scale（x,y）x:水平缩放，y垂直缩放*/
+		
+		.box2{width: 200px;height:200px;background: lightgreen;margin: 15px auto;transition: all 1s}
+		.box2:hover{transform: translate(50px,-50px);}
+		/*transform：translate（x,y）x:水平移动，y垂直移动*/
+
+		.box3{width: 200px;height:200px;background: lightgreen;margin: 15px auto;transition: all 1s}
+		.box3:hover{transform: skew(45deg,0);}
+		/*transform：skew（x度,y度）x:水平拉伸，y垂直拉伸*/
+
+		.box4{width: 200px;height:200px;background: lightgreen;margin: 15px auto;transition: all 1s}
+		.box4:hover{transform: skew(45deg,0) translate(0px,100px);}/*综合属性transform: 属性() 属性()
+
+
+		transform: rotateX(45deg)、transform: rotateY(90deg)、transform: rotateX(45deg)
+		沿X轴方向(类似单杠的旋转方式)
+		沿Y轴方向(类似钢管舞的旋转方式)
+		沿Z轴方向(垂直于平面)
+		*/
+	
+		.box5{width: 200px;height:200px;background: lightgreen;margin: 15px auto;transition: all 1s}
+		.box5:hover{transform: rotate(45deg); transform-origin: left top;}
+		 /* transform-origin转换的起点 */
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>转换动画</header>
+		<section>
+			<header>2d旋转</header>
+			<div class="wrap-box">
+				<div class="box"></div>
+			</div>
+		</section>
+		<section>
+			<header>缩放</header>
+			<div class="wrap-box">
+				<div class="box1">
+
+				</div>
+					
+			</div>
+		</section>
+		<section>
+			<header>移动</header>
+			<div class="wrap-box">
+				<div class="box2">
+					
+				</div>
+					
+			</div>
+		</section>
+		<section>
+			<header>斜切</header>
+			<div class="wrap-box">
+				<div class="box3">
+					
+				</div>
+					
+			</div>
+		</section>
+		<section>
+			<header>综合</header>
+			<div class="wrap-box">
+				<div class="box4"></div>		
+			</div>
+		</section>
+
+		<section>
+			<header>transform-origin</header>
+			<div class="wrap-box">
+				<div class="box5"></div>		
+			</div>
+		</section>
+
+	</div>
+</body>
+</html>

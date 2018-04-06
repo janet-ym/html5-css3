@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对元素类型进行匹配</title>
+	<style>
+		/* 按顺序 */
+		ul li:first-of-type{color: blue;}
+		ul li:last-of-type{color: red;}
+		ul a:last-of-type{color: red;}  /* ul的最后一种类型，并且该类型和a匹配 */
+		body p:only-of-type{color: green;}  /* body里唯一的一种类型，并且该类型和p匹配 */
+		ul li:nth-of-type(2){color: purple;}
+		/* 按倒序 */
+		ul li:nth-last-of-type(2){color: pink;}
+		:empty{width: 50px; height: 50px; background: red; margin: 10px; display: inline-block;}
+		p:empty{background-color: green;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>第一项</li>
+		<li>第二项</li>
+		<li>第三项</li>
+		<li>第四项</li>
+		<li>第五项</li>
+	</ul>
+	<ul>
+		<a>第一项</a>
+		<li>第二项</li>
+		<li>第三项</li>
+		<li>第四项</li>
+		<a>第五项</a>
+	</ul>
+	<ul>
+		<li>only-child只有一个孩子li的</li>
+	</ul>
+	<ul>
+		<a>only-child只有一个孩子a的</a>
+	</ul>
+	<p>只有一个p标签</p>
+	<div></div>
+	<div></div>
+	<p></p>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3边框阴影</title>
+	<style>
+		body, ul, li, dl, dt, dd, h1, h2, h3, h4, h5 {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: #F7F7F7;
+		}
+
+		.wrapper {
+			width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		header {
+			padding: 20px 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		header h3 {
+			line-height: 1;
+			font-weight: normal;
+			font-size: 28px;
+		}
+
+		.main {
+			/*overflow: hidden;*/
+		}
+
+		.main:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+
+		.main .item {
+			width: 210px;
+			height: 210px;
+			margin: 0 30px 30px 0;
+			/*display: flex;*/
+			position: relative;
+			background-color: #FFF;
+			float: left;
+			box-shadow: 2px 2px 5px #CCC;
+		}
+		
+		.main .item:after {
+			content: attr(data-brief);
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 210px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #FFF;
+			font-family: '微软雅黑';
+			font-size: 18px;
+			background-color: rgba(170, 170, 170, 0);
+			z-index: -1;
+			transition: all 0.3s ease-in;
+		}
+
+		.main .item:hover:after {
+			background-color: rgba(170, 170, 170, 0.6);
+			z-index: 100;
+		}
+
+		.main .item:nth-child(4n) {
+			margin-right: 0;
+		}
+
+		/*.main .item:nth-last-child(-n+5) {
+			margin-bottom: 0;
+		}*/
+
+		/* 以上是骨架样式 */
+		
+		
+		.box-shadow{width: 100px; height: 100px; border: 1px solid #ddd; margin: 50px auto;}
+		/* 水平偏移量(正值向右 负值向右 垂直正值向下 负值向上) */
+		/* 外部阴影标准写法：右和下阴影 */
+		.item:nth-child(1) .box-shadow{box-shadow: 2px 2px 5px #000;}
+
+		/* 上和左阴影 */
+		.item:nth-child(2) .box-shadow{box-shadow: -2px -2px 5px #000;}
+
+		/* 上面有阴影 */
+		.item:nth-child(3) .box-shadow{box-shadow: 0px -2px 5px #000;}
+
+		/* 下面有阴影 */
+		.item:nth-child(4) .box-shadow{box-shadow: 0px 2px 5px #000;}
+
+		/* 左边有阴影 */
+		.item:nth-child(5) .box-shadow{box-shadow: -2px 0px 5px #000;}
+
+		/* 右边有阴影 */
+		.item:nth-child(6) .box-shadow{box-shadow: 2px 0px 5px #000;}
+
+		.item:nth-child(7) .box-shadow{box-shadow: 15px 15px 0 #000;}
+
+		/* 水平半径，垂直半径，偏移量(模糊半径)，10px:表示投影扩展10px，颜色 */
+		.item:nth-child(8) .box-shadow{box-shadow: 0 0 0 10px #000;}
+
+		/* 偏移量和扩展也是数学运算的。(上下10px，左右0，扩展10px) */
+		.item:nth-child(9) .box-shadow{box-shadow: 10px 0 0 10px #000;}
+
+		/* 偏移量和扩展也是数学运算的。(上下10px，左右0，扩展10px) */
+		.item:nth-child(10) .box-shadow{box-shadow: 10px 10px 0 10px #000;}
+
+		/* 偏移量和扩展也是数学运算的。(上下10px，左右0，扩展10px) */
+		.item:nth-child(11) .box-shadow{box-shadow: 10px 10px 0 0 #000;}
+
+
+		/* 内部阴影 */
+		.item:nth-child(12) .box-shadow{box-shadow: inset 20px 20px 20px -10px #000;}
+
+		/* 内外部阴影 */
+		.item:nth-child(13) .box-shadow{box-shadow: inset 20px 20px 20px -10px #000,20px 20px 10px red;}
+		
+		/* 多个内外部阴影 */
+		.item:nth-child(14) .box-shadow{box-shadow: inset 20px 20px 20px -10px green,inset 20px 20px 20px -10px #000,20px 20px 10px red,20px 20px 10px blue;}
+
+		/* 是否会影响盒子的布局 */
+		.item:nth-child(15) .box-shadow{}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h3>css3边框阴影</h3>
+		</header>
+		<div class="main">
+			<div class="item" data-brief="标准写法">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+			<div class="item">
+				<div class="box-shadow"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

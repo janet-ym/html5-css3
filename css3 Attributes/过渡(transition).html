@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3过渡</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			background-color: #F7F7F7;
+		}
+
+		.wrapper {
+			width: 1024px;
+			margin: 0 auto;
+		}
+
+		.wrapper > section {
+			min-height: 300px;
+			margin-bottom: 30px;
+			box-shadow: 1px 1px 4px #DDD;
+			background-color: #FFF;
+		}
+
+		.wrapper > header {
+			text-align: center;
+			line-height: 1;
+			padding: 20px;
+			margin-bottom: 10px;
+			font-size: 30px;
+		}
+
+		.wrapper section > header {
+			line-height: 1;
+			padding: 10px;
+			font-size: 22px;
+			color: #333;
+			background-color: #EEE;
+		}
+
+		.wrapper .wrap-box {
+			padding: 20px;
+		}
+
+
+
+		.transition{width: 200px; height: 200px; background-color: yellow; margin-left: 10px; transition: all 1s ease 2s; 
+			/* 综合属性： 属性 持续时间 速度 延迟时间 */
+
+			/*transition-property: all;*/  /* 需要过渡的属性 */
+			/*transition-duration: 1s; */ /* 持续时间 */
+			/*transition-timing-function: ease;*/  /* 控制过渡的速度，默认是linear(匀速) */
+			/*transition-delay: 3s;  *//* 多久之后才执行 */}				  
+		.transition:hover{background-color: red; margin-left: 800px; transition: all 1s ease 2s;}
+
+
+		.scale{width: 200px; height: 200px; margin-left: 10px; 
+			transition: all 0.3s;}
+		.scale:hover{transform: scale(1.2);}
+
+
+		.text{font-size: 30px; color: #000; letter-spacing: 30px; transition: all 0.5s; text-align: center;}
+		.text:hover{color: green; letter-spacing: 10px;}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>CSS3-过渡</header>
+		<section class="move">
+			<header>移动</header>
+			<div class="wrap-box">
+				<div class="transition"></div>
+			</div>
+		</section>
+
+		<header>CSS3-图片放大</header>
+		<section class="move">
+			<header>图片放大</header>
+			<div class="wrap-box">
+				<div class="scale"><img src="2.jpg" alt=""></div>
+			</div>
+		</section>
+
+		<header>CSS3-文字变化</header>
+		<section class="move">
+			<header>文字变化</header>
+			<div class="wrap-box">
+				<div class="text">4亿网友共同信赖</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
