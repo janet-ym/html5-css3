@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<p>计数器: <output id="result"></output></p>
+<button onclick="startWorker()">开始 Worker</button>
+<button onclick="stopWorker()">结束 Worker</button>
+<br /><br />
+
+<script>
+var w;
+var result=document.getElementById("result");
+function startWorker(){
+if(typeof(Worker)!=="undefined"){
+//在创建 web worker 之前，请检测用户的浏览器是否支持它
+  if(typeof(w)=="undefined"){
+    w=new Worker("ww.js");
+ //检测是否存在worker，如果不存在,- 它会创建一个新的 web worker对象,然后运行 "ww.js" 中的代码
+    }
+  w.onmessage = function (event) {
+//当 web worker 传递消息时
+//接收来自ww.js传回的信息
+   result.innerHTML=event.data;
+  };
+}
+else{
+result.innerHTML="Sorry, your browser does not support Web Workers...";
+}
+}
+
+function stopWorker(){
+w.terminate();
+//终止web worker,并释放浏览器/计算机资源
+}
+</script>
+
+</body>
+</html>
