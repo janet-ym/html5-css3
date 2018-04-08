@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas(哆啦A梦)</title>
+	<style>
+		canvas {border: 1px solid lightgreen;}
+	</style>
+</head>
+
+<body>
+	<canvas width="1200" height="600" id="myCanvas"></canvas>
+	<script>
+		var a = document.getElementById('myCanvas');
+		var cxt = a.getContext('2d');
+
+		cxt.fillStyle = "#00a0e8"; //大圆
+		cxt.beginPath();
+		cxt.scale(1.0, 0.8);
+		cxt.arc(500, 110, 80, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000";
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(500, 110, 80, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.fillStyle = "#fff"; //小圆
+		cxt.beginPath();
+		cxt.arc(500, 130, 60, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000";
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(500, 130, 60, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //左眼
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		cxt.scale(0.7, 1.1);
+		cxt.arc(680, 55, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.fillStyle = "#fff"; //眼睛眼白
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(680, 55, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.fillStyle = "#000"; //眼睛大小
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(695, 65, 6, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000"; //右眼
+		cxt.lineWidth = 2;
+		cxt.beginPath();
+		//cxt.scale(0.7,1.1);
+		cxt.arc(740, 55, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.fillStyle = "#fff"; //眼睛眼白
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(740, 55, 20, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.fillStyle = "#000"; //眼睛大小
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(725, 65, 6, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000"; //鼻子(遮罩)
+		cxt.lineWidth = 2;
+
+		cxt.beginPath(); //鼻子描边
+		cxt.arc(710, 80, 10, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.stroke();
+
+		cxt.fillStyle = "#e70012"; //鼻子形状
+		cxt.lineWidth = 1;
+		cxt.beginPath();
+		cxt.arc(710, 80, 10, 0, Math.PI * 2, false);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.strokeStyle = "#000"; //连接鼻子和嘴巴的直线长度
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.moveTo(710, 90); //嘴巴
+		cxt.lineTo(710, 155);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000";
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.scale(0.9, 0.3);
+		cxt.arc(790, 425, 90, 0, Math.PI, false);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; // 胡须
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.moveTo(700, 270);
+		cxt.lineTo(750, 320);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //胡须
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.moveTo(700, 340);
+		cxt.lineTo(750, 340);
+		cxt.stroke();
+		
+		cxt.strokeStyle = "#000"; //胡须
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.moveTo(750, 360);
+		cxt.lineTo(700, 390);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //胡须
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.moveTo(875, 270);
+		cxt.lineTo(825, 320);
+		cxt.stroke();
+		cxt.strokeStyle = "#000"; //胡须
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.moveTo(825, 340);
+		cxt.lineTo(875, 340);
+		cxt.stroke();
+
+		cxt.strokeStyle = "#000"; //胡须
+		cxt.lineWidth = 3;
+		cxt.beginPath();
+		cxt.moveTo(825, 360);
+		cxt.lineTo(875, 390);
+		cxt.stroke();
+
+		// cxt.fillStyle = "#e40210"; //项链的形状
+		// cxt.fillRect(670, 570, 250, 65);
+		// cxt.fill();
+
+		// cxt.strokeStyle = "#000"; //项链的描边
+		// cxt.lineWidth = 2;
+		// cxt.strokeRect(670, 572, 250, 65);
+		// cxt.stroke();
+
+		// cxt.fillStyle = "#f6ea1c"; //铃铛的形状(黄色的圆) 
+		// cxt.strokeStyle = "#000";
+		// cxt.beginPath();
+		// cxt.scale(0.5, 1.0);
+		// cxt.arc(1580, 620, 40, 0, Math.PI * 2, false);
+		// cxt.fill();
+		// cxt.stroke();
+
+		// cxt.fillStyle = "#000"; //铃铛上的圆
+		// cxt.beginPath();
+		// cxt.scale(1, 1.0);
+		// cxt.arc(1580, 620, 12, 0, Math.PI * 2, false);
+		// cxt.fill();
+
+		// cxt.strokeStyle = "#000";  //铃铛上的竖线
+		// cxt.lineWidth = 6;
+		// cxt.beginPath();
+		// cxt.moveTo(1580, 660);
+		// cxt.lineTo(1580, 610);
+		// cxt.stroke();
+
+		// cxt.strokeStyle = "#000"; //铃铛上的下横线
+		// cxt.lineWidth = 3;
+		// cxt.beginPath();
+		// cxt.moveTo(1540, 600);
+		// cxt.lineTo(1612, 600);
+		// cxt.stroke();
+
+		// cxt.strokeStyle = "#000"; //铃铛上的下横线
+		// cxt.lineWidth = 3;
+		// cxt.beginPath();
+		// cxt.moveTo(1540, 605);
+		// cxt.lineTo(1612, 605);
+		// cxt.stroke();
+
+	</script>
+<!-- 		把图像保存到新的窗口
+		var w = window.open(a.toDataURL("image/png"), "smallwin", "width=400,height=350"); -->
+</body>
+</html>
+

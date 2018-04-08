@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钢琴导航栏</title>
+	<style>
+		*{ margin:0; padding:0;}
+		#ul1{ width:700px; height:30px; border:1px #0B94FF solid;}
+		#ul1 li{ list-style:none; width:100px; height:30px; background:#4DB1BF; color:#000; float:left; line-height:30px; text-align:center;}
+	</style>
+	<script>
+	window.onload = function(){  //当窗口把文档加载完毕
+		var aLi = document.getElementsByTagName('li');  //通过标签名称获取所有的li，把所有的li放到名为aLi的数组里
+		var oA = document.getElementById('a1'); //通过id获取audio元素,oA代表audio元素
+		for (var i = 0; i<aLi.length; i++) {
+			aLi[i].onmouseover = function(){
+				oA.src = 'http://s8.qhimg.com/share/audio/piano1/'+this.getAttribute('au')+'4.mp3';
+				oA.play(); //播放音频文件
+			};
+		}
+
+	};
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li au="a">新闻头条</li>
+	    <li au="b">电视剧</li>
+	    <li au="c">最新电影</li>
+	    <li au="d">热播综艺</li>
+	    <li au="e">免费小说</li>
+	    <li au="f">玩游戏</li>
+	    <li au="g">网上购物</li>
+	</ul>
+	<audio id="a1" src="http://s8.qhimg.com/share/audio/piano1/'+this.getAttribute('au')+'4.mp3'"></audio>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>横向菜单</title>
+	<style type="text/css">
+		.nav{padding: 0; margin: 0; border: 1px solid red;}
+		.father{height: 31px; position: relative; list-style: none; margin: 0px; padding: 0px;}
+		.father li{cursor: pointer; float: left; padding: 5px; margin-right: 5px;}
+		.father li a{text-decoration: none;}
+		.father li:hover ul{display: block;}
+		.son{display: none; background-color: red; height:30px; list-style: none; margin: 0px; padding: 0px; margin-top: 5px;}
+		.son li{cursor:pointer padding: 5px; float: left; margin-right: 5px;}
+		.son li:hover{background-color: blue;}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<ul class="father">
+			<li>first</li>
+			<li>
+				<a href="">father</a>
+				<ul class="son">
+					<li>son1</li>
+					<li>son2</li>
+					<li>son3</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
